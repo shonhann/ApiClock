@@ -20,7 +20,7 @@ def update_time():
     now = datetime.now(pytz.timezone(user_timezone))
     time_str = now.strftime('%H:%M:%S')
     clock_label.config(text=time_str)
-    root.after(1000, update_time)
+    root.after(1, update_time)
 
 
 city, country, user_timezone = get_location_and_timezone()
